@@ -1,0 +1,24 @@
+<!-- <p>movies-list works!</p>
+<div>
+    {{title}}
+</div> -->
+
+<app-generic-list [list]="movies">
+  <ng-container loading>
+    this is loading...
+  </ng-container>
+  <ng-container empty>
+    NO content
+  </ng-container>
+  <ng-container content>
+    <div *ngFor="let movie of movies; let index = index" class="movie-container">
+      <div>
+        <button style="margin-left:1rem;" (click)="remove(index)">Remove</button>
+        ({{index}}){{movie.title | uppercase}}<br />
+        {{movie.releaseDate | date:"dd-MMMM-yyyy" | uppercase }}<br />
+        {{movie.price | currency }}<br />
+      </div>
+    </div>
+
+  </ng-container>
+</app-generic-list>
