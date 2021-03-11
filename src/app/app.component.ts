@@ -19,6 +19,54 @@ export class AppComponent implements OnInit {
         title: 'iron-man',
         releaseDate: new Date(),
         price: 19.99
+      },{
+        title: 'spider-man',
+        releaseDate: new Date(),
+        price: 14.99
+      }, {
+        title: 'iron-man',
+        releaseDate: new Date(),
+        price: 19.99
+      },{
+        title: 'spider-man',
+        releaseDate: new Date(),
+        price: 14.99
+      }, {
+        title: 'iron-man',
+        releaseDate: new Date(),
+        price: 19.99
+      },{
+        title: 'spider-man',
+        releaseDate: new Date(),
+        price: 14.99
+      }, {
+        title: 'iron-man',
+        releaseDate: new Date(),
+        price: 19.99
+      },{
+        title: 'spider-man',
+        releaseDate: new Date(),
+        price: 14.99
+      }, {
+        title: 'iron-man',
+        releaseDate: new Date(),
+        price: 19.99
+      },{
+        title: 'spider-man',
+        releaseDate: new Date(),
+        price: 14.99
+      }, {
+        title: 'iron-man',
+        releaseDate: new Date(),
+        price: 19.99
+      },{
+        title: 'spider-man',
+        releaseDate: new Date(),
+        price: 14.99
+      }, {
+        title: 'iron-man',
+        releaseDate: new Date(),
+        price: 19.99
       }];
 
       this.moviesFutureReleases = []

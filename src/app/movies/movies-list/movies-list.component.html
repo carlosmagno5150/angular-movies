@@ -12,11 +12,11 @@
   </ng-container>
   <ng-container content>
     <div *ngFor="let movie of movies; let index = index" class="movie-container">
-      <div>
-        <button style="margin-left:1rem;" (click)="remove(index)">Remove</button>
-        ({{index}}){{movie.title | uppercase}}<br />
+      <div>        
+        <h3>({{index}}){{movie.title | uppercase}}<br /></h3>
         {{movie.releaseDate | date:"dd-MMMM-yyyy" | uppercase }}<br />
         {{movie.price | currency }}<br />
+        <button style="margin-left:1rem;" (click)="remove(index)">Remove</button>
       </div>
     </div>
 
