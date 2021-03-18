@@ -36,6 +36,19 @@
         (changeMarkdown)="changeMarkdown($event)"
     ></app-input-markdown>
 
+    <h4>Select the Genres</h4>
+    <app-multiple-selector [NonSelectedItens]="nonSelectedGenres"
+        [SelectedItens]="SelectedGenres"
+    ></app-multiple-selector>
+
+    <h4>Select the Movie Theaters</h4>
+    <app-multiple-selector [NonSelectedItens]="nonSelectedMovieTheaters"
+        [SelectedItens]="SelectedMovieTheaters"
+    ></app-multiple-selector>
+
+    <h4>Select the actors</h4>
+    <app-actors-autocomplete></app-actors-autocomplete>
+
     <div>
         <button mat-flat-button color="primary" [disabled]="form.invalid">
             Save Changes
