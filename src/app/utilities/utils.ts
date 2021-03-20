@@ -8,3 +8,25 @@ export function toBase64(file: File){
         reader.onerror = (error) => reject(error);
     })
 }
+
+export function parseWebApiErrors(response: any): string[]{
+    const result: string[] = [];
+    if (response.error){
+        if (typeof(response.error) === "string"){
+            console.log( 'Error  : ' + response.error);
+            result.push(response.error);
+        } else {
+            const mapErrors = response.error.errors;
+            const entries = Object.entries(mapErrors);
+            entries.forEach((arr: any[]) => {
+                const field = arr[0];                
+                arr[1].forEach(errorMessage => {
+                    console.log( 'Error  : ' + errorMessage);
+                    result.push(`${field}: ${errorMessage}`);
+                });
+            })            
+        }
+    }
+
+    return result;
+}

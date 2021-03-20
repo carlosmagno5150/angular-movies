@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,7 +12,7 @@ import { MarkdownModule } from 'ngx-markdown';
 import { LeafletModule } from '@asymmetrik/ngx-leaflet'
 import "leaflet/dist/images/marker-shadow.png";
 
-import { MaterialModule} from './material/material.module';
+import { MaterialModule } from './material/material.module';
 import { MenuComponent } from './menu/menu.component';
 import { RatingComponent } from './utilities/rating/rating.component';
 import { HomeComponent } from './home/home.component';
@@ -36,6 +37,7 @@ import { MapComponent } from './utilities/map/map.component';
 import { FormMovieComponent } from './movies/form-movie/form-movie.component';
 import { MultipleSelectorComponent } from './utilities/multiple-selector/multiple-selector.component';
 import { ActorsAutocompleteComponent } from './actors/actors-autocomplete/actors-autocomplete.component';
+import { DisplayErrorsComponent } from './utilities/display-errors/display-errors.component';
 
 @NgModule({
   declarations: [
@@ -65,7 +67,8 @@ import { ActorsAutocompleteComponent } from './actors/actors-autocomplete/actors
     MapComponent,
     FormMovieComponent,
     MultipleSelectorComponent,
-    ActorsAutocompleteComponent    
+    ActorsAutocompleteComponent,
+    DisplayErrorsComponent
   ],
   imports: [
     BrowserModule,
@@ -75,7 +78,8 @@ import { ActorsAutocompleteComponent } from './actors/actors-autocomplete/actors
     ReactiveFormsModule,
     FormsModule,
     LeafletModule,
-    MarkdownModule.forRoot()
+    HttpClientModule,
+    MarkdownModule.forRoot()  
   ],
   providers: [],
   bootstrap: [AppComponent]

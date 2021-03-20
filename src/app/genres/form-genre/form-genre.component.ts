@@ -25,8 +25,8 @@ export class FormGenreComponent implements OnInit {
     this.form = this.formBuilder.group({
       name: ['', {
         validators: [Validators.required,
-        Validators.minLength(3),
-        firstLetterUppercase()]
+        Validators.minLength(3)//,firstLetterUppercase()
+      ]
       }]
     });
     if (this.model !== undefined){
